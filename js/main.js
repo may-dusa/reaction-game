@@ -11,6 +11,8 @@ var ctr = 0;
 
 $(document).ready(function() {
 
+  $("body").css({"height" : $(window).height, "width" : $(window).width});
+
   $("#start").click(function() {
     count_down();
   });
@@ -55,12 +57,15 @@ $(document).ready(function() {
     $("#shapes").animate({opacity: 1}, 200);
     $("#top-bar").animate({opacity: 1}, 200);
 
-    $("#shapes").attr("class", "shape");
+    $("#shapes").attr({"class" : "shape", "style" : ""});
     num = Math.floor((Math.random()*50)) + 100;
     c_selector = Math.floor((Math.random()*4));
 
     height = Math.floor((Math.random()*$(window).height()));
     width = Math.floor((Math.random()*$(window).width()));
+
+    height = Math.min(height, ($(window).height()-50));
+    width = Math.min(width, ($(window).width()-50));
 
     $("#shapes").css({"top" : height+"px", "left" : width+"px"});
 
