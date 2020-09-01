@@ -92,11 +92,15 @@ $(document).ready(function() {
 
     var time = (new Date().getTime() - start)/1000;
 
-    $("#time > span").html(time + "s");
+    $("#time-num").html(time + "<span style=color:white;>s<span>");
+    $("#time-num").css('color', '#fedd2a');
 
     total = total + time;
 
     shape_ctr++;
+
+    $("#click-num").html(shape_ctr);
+    $("#click-num").css('color', '#fedd2a');
 
     continue_prog();
 
