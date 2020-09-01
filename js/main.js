@@ -11,7 +11,7 @@ var ctr = 0;
 
 $(document).ready(function() {
 
-  $("body").css({"height" : $(window).height, "width" : $(window).width});
+  $("body").css({"height" : $(window).height()+"px", "width" : $(window).width()+"px"});
 
   $("#start").click(function() {
     count_down();
