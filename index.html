@@ -2,19 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Reaction Game</title>
+    <link rel="stylesheet" href="css/master.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <p id="content"></p>
-    <button id="click-me">Click me!</button>
-
-    <script type="text/javascript">
-      $("#click-me").click(function(){
-        $.ajax("info.txt").done(function(data) {
-          $("#content").html(data);
-        })
-      });
-    </script>
-  </body>
+    <div id="body-container">
+      <div class="header" id="welcome"><p>Welcome to the</p>Reaction Game</div>
+      <div class="body" id="description">Click the shapes as they appear. Make sure to bring your <span>reflex skills!</span></div>
+      <button class="button body" id="start">Start</button>
+    </div>
+    <div id="countdown" class="header"></div>
+    <div id="shapes" class="shape"></div>
+    <div id="top-bar">
+      <div id="time" class="body">Time: <span></span></div>
+      <button class="button body" id="end">Stop</button>
+    </div>
+    <div id="result">
+      <div id="time-result" class="header"><p>Your average time</p><span></span></div>
+      <div class="body" id="shapes-result">Number of shapes clicked: <span></span></div>
+      <button class="button body" id="restart">Restart</button>
+    </div>
+  </body
 </html>
