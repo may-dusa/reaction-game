@@ -64,10 +64,10 @@ $(document).ready(function() {
     height = Math.floor((Math.random()*$(window).height()));
     width = Math.floor((Math.random()*$(window).width()));
 
-    height = Math.min(height, ($(window).height()-50));
+    height = Math.min(height, ($(window).height()-128));
     width = Math.min(width, ($(window).width()-50));
 
-    $("#shapes").css({"top" : height+"px", "left" : width+"px"});
+    $("#shapes").css({"top" : (height+78)+"px", "left" : width+"px"});
 
     switch(c_selector) {
       case 0:
